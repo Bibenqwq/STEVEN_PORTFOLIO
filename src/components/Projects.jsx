@@ -7,6 +7,7 @@ const projects = [
     screenTag: 'PC Builder',
     screenIcon: 'fa-desktop',
     screenType: 'card-row',
+    previewImg: 'https://image.thum.io/get/width/800/crop/500/noanimate/https://plugnplaypc.vercel.app/Main.html',
     tags: ['React', 'Vercel', 'E-Commerce'],
     title: 'PlugNPlayPC',
     desc: 'A modern PC builder and e-commerce platform for custom computer components. Built with React, featuring component compatibility checks and a seamless checkout experience.',
@@ -54,7 +55,7 @@ function ScreenContent({ type, tag, icon }) {
       {type === 'hero' && <div className="screen-hero-block"></div>}
       {type === 'form' && <div className="screen-form-block"></div>}
       <div className="screen-tag">
-        <i className={`fa-solid ${icon}`} style={{marginRight:'6px'}}></i>{tag}
+        <i className={`fa-solid ${icon}`} style={{ marginRight: '6px' }}></i>{tag}
       </div>
     </div>
   )
