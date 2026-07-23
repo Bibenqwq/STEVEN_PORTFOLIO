@@ -16,14 +16,15 @@ const projects = [
     id: 'projResort',
     featured: false,
     gradient: 'linear-gradient(135deg,#0d4027 0%,#1a6b3a 50%,#2d9e5f 100%)',
-    screenUrl: 'Resort Website',
+    screenUrl: 'test123-one-beige.vercel.app',
     screenTag: 'Resort Booking',
     screenIcon: 'fa-umbrella-beach',
     screenType: 'hero',
+    previewImg: 'https://image.thum.io/get/width/800/crop/500/noanimate/https://test123-one-beige.vercel.app/',
     tags: ['PHP', 'MySQL', 'System'],
     title: 'Resort Website System',
     desc: 'Full-stack resort management system with booking, reservation tracking, admin dashboard, and customer management built with PHP and MySQL.',
-    links: [{ label: 'Private Repo', icon: 'fa-lock', ghost: true }],
+    links: [{ href: 'https://test123-one-beige.vercel.app/', label: 'Live Demo', id: 'linkResort', icon: 'fa-arrow-up-right-from-square', primary: true }],
   },
   {
     id: 'projComingSoon',
@@ -74,15 +75,31 @@ export default function Projects() {
             <div key={p.id} className={`project-card${p.featured ? ' featured' : ''}`} id={p.id}>
               <div className="project-img-wrap">
                 <div className="project-img" style={{ background: p.gradient }}>
-                  <div className="project-preview-screen">
-                    <div className="screen-bar">
-                      <span className="dot r"></span>
-                      <span className="dot y"></span>
-                      <span className="dot g"></span>
-                      <span className="screen-url">{p.screenUrl}</span>
+                  {p.previewImg ? (
+                    <div className="project-preview-screen">
+                      <div className="screen-bar">
+                        <span className="dot r"></span>
+                        <span className="dot y"></span>
+                        <span className="dot g"></span>
+                        <span className="screen-url">{p.screenUrl}</span>
+                      </div>
+                      <img
+                        src={p.previewImg}
+                        alt={p.title}
+                        style={{ width: '100%', height: 'calc(100% - 32px)', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+                      />
                     </div>
-                    <ScreenContent type={p.screenType} tag={p.screenTag} icon={p.screenIcon} />
-                  </div>
+                  ) : (
+                    <div className="project-preview-screen">
+                      <div className="screen-bar">
+                        <span className="dot r"></span>
+                        <span className="dot y"></span>
+                        <span className="dot g"></span>
+                        <span className="screen-url">{p.screenUrl}</span>
+                      </div>
+                      <ScreenContent type={p.screenType} tag={p.screenTag} icon={p.screenIcon} />
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="project-info">
