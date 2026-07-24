@@ -46,7 +46,6 @@ body {
   background: var(--cream);
   color: var(--text-primary);
   overflow-x: hidden;
-  cursor: none;
 }
 
 /* ── NOISE TEXTURE OVERLAY ── */
@@ -60,33 +59,7 @@ body {
   background-size: 200px;
 }
 
-/* ── CUSTOM CURSOR ── */
-.cursor {
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  background: var(--dark);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s, background 0.2s;
-}
 
-.cursor-follower {
-  position: fixed;
-  width: 32px;
-  height: 32px;
-  border: 1.5px solid var(--dark);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: all 0.12s ease;
-  opacity: 0.4;
-}
-
-body:hover .cursor { opacity: 1; }
 
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 5px; }
@@ -310,16 +283,7 @@ em { font-style: italic; font-weight: 700; }
   overflow: hidden;
 }
 
-.hero-bg-grid {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.5;
-}
+
 
 /* HERO CONTENT */
 .hero-content {
@@ -401,35 +365,52 @@ em { font-style: italic; font-weight: 700; }
 }
 
 .hero-scroll-indicator {
-  display: flex;
+  display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   margin-top: 56px;
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.55;
+}
+
+.hero-scroll-indicator:hover {
+  transform: translateY(4px);
+  opacity: 1;
+}
+
+.scroll-mouse {
+  width: 24px;
+  height: 38px;
+  border: 2px solid var(--dark);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  position: relative;
+}
+
+.scroll-dot {
+  width: 4px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 99px;
+  animation: scroll-bounce 1.8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes scroll-bounce {
+  0%   { transform: translateY(0);   opacity: 1; }
+  60%  { transform: translateY(10px); opacity: 0.2; }
+  100% { transform: translateY(0);   opacity: 1; }
+}
+
+.scroll-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-muted);
-}
-
-.scroll-line {
-  width: 48px;
-  height: 1px;
-  background: var(--accent);
-  position: relative;
-  overflow: hidden;
-}
-
-.scroll-line::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--cream);
-  animation: scroll-anim 2s infinite;
-}
-
-@keyframes scroll-anim {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
 }
 
 /* HERO VISUAL — PHOTO */
