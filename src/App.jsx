@@ -48,24 +48,7 @@ export default function App() {
     return () => observer.disconnect()
   }, [])
 
-  // Custom cursor
-  useEffect(() => {
-    const cursor = document.getElementById('cursor')
-    const follower = document.getElementById('cursorFollower')
-    if (!cursor || !follower) return
-    let mx = 0, my = 0, fx = 0, fy = 0
-    const move = (e) => { mx = e.clientX; my = e.clientY }
-    window.addEventListener('mousemove', move)
-    const animate = () => {
-      fx += (mx - fx) * 0.12
-      fy += (my - fy) * 0.12
-      cursor.style.transform = `translate(${mx}px,${my}px)`
-      follower.style.transform = `translate(${fx}px,${fy}px)`
-      requestAnimationFrame(animate)
-    }
-    animate()
-    return () => window.removeEventListener('mousemove', move)
-  }, [])
+
 
   // Nav scroll effect
   useEffect(() => {
@@ -77,8 +60,7 @@ export default function App() {
 
   return (
     <>
-      <div className="cursor" id="cursor"></div>
-      <div className="cursor-follower" id="cursorFollower"></div>
+
       <div className="noise"></div>
 
       <Navbar
