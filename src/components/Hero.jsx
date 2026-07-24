@@ -5,7 +5,6 @@ export default function Hero() {
 
   return (
     <section className="hero" id="hero">
-      <div className="hero-bg-grid"></div>
       <div className="hero-content">
 
         <h1 className="hero-title">
@@ -23,10 +22,12 @@ export default function Hero() {
           <a href="#projects" className="btn btn-primary" id="heroProjectsBtn">View Projects</a>
           <a href="#resume" className="btn btn-ghost" id="heroContactBtn">Get in Touch</a>
         </div>
-        <div className="hero-scroll-indicator">
-          <span>Scroll</span>
-          <div className="scroll-line"></div>
-        </div>
+        <a href="#about" className="hero-scroll-indicator" id="heroScrollBtn" aria-label="Scroll down">
+          <div className="scroll-mouse">
+            <div className="scroll-dot"></div>
+          </div>
+          <span className="scroll-label">Scroll</span>
+        </a>
       </div>
       <div className="hero-visual">
         <div className="hero-photo-wrap">
