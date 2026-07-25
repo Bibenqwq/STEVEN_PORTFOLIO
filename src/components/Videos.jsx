@@ -1,8 +1,8 @@
 const videos = [
-  { id: 'PN81f5S-IiY', title: 'PROJECT 1', tool: 'Premiere Pro', featured: true },
-  { id: '6aK6lKZcqlY', title: 'PROJECT 2', tool: 'After Effects' },
+  { id: 'PN81f5S-IiY', title: 'PROJECT 1', tool: 'Capcut', featured: true },
+  { id: '6aK6lKZcqlY', title: 'PROJECT 2', tool: 'Premier Pro' },
   { id: '02Vb20SgBy4', title: 'PROJECT 3', tool: 'Premiere Pro' },
-  { id: 'UPjlnkvm2kw', title: 'PROJECT 4', tool: 'After Effects' },
+  { id: 'UPjlnkvm2kw', title: 'PROJECT 4', tool: 'Capcut' },
   { id: 'OKgUehAryG0', title: 'PROJECT 5', tool: 'Premiere Pro' },
 ]
 
