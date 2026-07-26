@@ -12,7 +12,6 @@ export default function Navbar({ mobileMenuOpen, setMobileMenuOpen }) {
           <li><a href="#about" className="nav-link" onClick={close}>About</a></li>
           <li><a href="#skills" className="nav-link" onClick={close}>Skills</a></li>
           <li><a href="#projects" className="nav-link" onClick={close}>Projects</a></li>
-          <li><a href="#videos" className="nav-link" onClick={close}>Videos</a></li>
           <li>
             <a href="/file/Resume.pdf" target="_blank" rel="noopener" className="nav-link" >
               Resume
@@ -34,7 +33,6 @@ export default function Navbar({ mobileMenuOpen, setMobileMenuOpen }) {
           <li><a href="#about" className="mobile-link" onClick={close}>About</a></li>
           <li><a href="#skills" className="mobile-link" onClick={close}>Skills</a></li>
           <li><a href="#projects" className="mobile-link" onClick={close}>Projects</a></li>
-          <li><a href="#videos" className="mobile-link" onClick={close}>Videos</a></li>
           <li><a href="/file/Resume.pdf" target="_blank" rel="noopener" className="mobile-link" onClick={close}>Resume</a></li>
         </ul>
       </div>
