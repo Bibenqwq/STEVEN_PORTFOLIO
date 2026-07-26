@@ -41,6 +41,20 @@ const projects = [
     desc: 'A sleek streetwear brand website with a modern dark aesthetic. Features product showcases, brand storytelling, and a premium e-commerce-ready layout.',
     links: [{ href: 'https://peaksociety.vercel.app/', label: 'Live Demo', id: 'linkPeakSociety', icon: 'fa-arrow-up-right-from-square', primary: true }],
   },
+  {
+    id: 'projIphone17',
+    featured: false,
+    gradient: 'linear-gradient(135deg,#1a0d00 0%,#3d1f00 50%,#7a3d00 100%)',
+    screenUrl: 'iphone-17-pro-max-amber.vercel.app',
+    screenTag: 'iPhone 17 Pro Max',
+    screenIcon: 'fa-mobile-screen',
+    screenType: 'hero',
+    previewImg: '/img/iphone17.png',
+    tags: ['HTML/CSS', 'JavaScript', 'Vercel'],
+    title: 'iPhone 17 Pro Max',
+    desc: 'A stunning Apple-inspired product showcase page for the iPhone 17 Pro Max in Desert Amber. Features sleek animations, premium design aesthetics, and an immersive product reveal experience.',
+    links: [{ href: 'https://iphone-17-pro-max-amber.vercel.app/', label: 'Live Demo', id: 'linkIphone17', icon: 'fa-arrow-up-right-from-square', primary: true }],
+  },
 ]
 
 function ScreenContent({ type, tag, icon }) {
